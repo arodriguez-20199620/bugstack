@@ -1,0 +1,145 @@
+@use '@angular/material' as mat;
+
+$dark-gunmetal: #222831;
+$charcoal: #31363F;
+$verdigris: #76ABAE;
+$bright-gray: #EEEEEE;
+$red-white: #FEF3F2;
+$garnet: #821E13;
+
+.users-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+
+  .users-card {
+    background-color: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 900px;
+    height: 600px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    .users-title {
+      align-self: flex-start;
+      margin-bottom: 20px;
+      color: $dark-gunmetal;
+      font-size: 26px;
+    }
+
+    .add-user-button {
+      position: relative;
+      align-self: flex-end;
+      margin-bottom: 20px;
+      background-color: $verdigris;
+      color: white;
+      &:hover {
+        background-color: $charcoal;
+      }
+    }
+
+    .users-content-container {
+      flex-grow: 1; 
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%; 
+      align-items: center; 
+    }
+
+    .users-table-container {
+      width: 100%;
+      overflow-x: auto;
+      margin-top: 60px;
+      flex-grow: 1;
+    }
+
+    .paginator-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      bottom: 20px;  
+      width: 100%;  
+    }
+
+    @media (max-width: 430px) {
+      padding: 10px;
+      flex-direction: column;
+
+      .users-title {
+        font-size: 20px;
+        margin-bottom: 10px; 
+      }
+
+      .add-user-button {
+        margin-bottom: 10px;
+      }
+
+      .users-table-container {
+        display: none;
+      }
+
+      .user-profile-list {
+        display: block;
+        width: 100%; 
+        list-style-type: none;
+        padding: 0;
+        margin-top: 20px;
+      }
+
+      .user-profile-list li {
+        margin: 10px 0;
+        background-color: white;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        width: 100%;
+      }
+
+      .user-details-card {
+        display: none;
+        margin-top: 10px;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+      }
+
+      .user-details-card.active {
+        display: block;
+      }
+    }
+  }
+  
+  .action-icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.2s ease;
+  
+    &:hover {
+      transform: scale(1.1);
+    }
+  
+/*     &.edit-icon {
+      filter: hue-rotate(100deg);
+    }
+  
+    &.delete-icon {
+      filter: hue-rotate(0deg);
+    } */
+  
+    @media (max-width: 430px) {
+      width: 18px;
+      height: 18px;
+    }
+  }
+}
+

@@ -1,0 +1,27 @@
+<div class="user-modal-container">
+    <h2>Agregar Usuario</h2>
+    <form>
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Correo electrónico</mat-label>
+        <input matInput type="email" placeholder="Ingresa el correo" required />
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Nombre</mat-label>
+        <input matInput type="text" placeholder="Ingresa el nombre" required />
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Perfil</mat-label>
+        <mat-select required>
+          <mat-option value="admin">Administrador</mat-option>
+          <mat-option value="user">Usuario</mat-option>
+        </mat-select>
+      </mat-form-field>
+  
+      <div class="button-group">
+        <button mat-button mat-dialog-close>Cerrar</button>
+        <button mat-raised-button color="primary" [mat-dialog-close]="true">Guardar</button>
+      </div>
+    </form>
+</div>

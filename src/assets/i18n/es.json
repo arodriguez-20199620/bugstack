@@ -1,0 +1,68 @@
+{
+  "Home": "Inicio",
+  "About": "Acerca de",
+  "Blogs": "Blogs",
+  "Search": "Buscar...",
+  "SignIn": "Iniciar sesión",
+  "Profiles": "Perfiles",
+  "Users": "Usuarios",
+  "Audit": "Auditoría",
+  "Save": "Guardar",
+  "Name": "Nombre*",
+  "Access": "Acceso",
+  "Administration": "Administración General",
+  "UserManagement": "Gestión de Usuarios",
+  "ReviewandControl": "Revisión y Control",
+  "Administrator": "Administrador",
+  "Moderator": "Moderador",
+  "RegisteredUser": "Usuario Registrado",
+  "AnonymousUser": "Usuario Anónimo",
+  "Reviser": "Revisor",
+  "Settings": "Configuraciones",
+  "SignOut": "Cerrar sesión",
+  "Dashboard": "Panel de Control",
+  "English": "Inglés",
+  "Spanish": "Español",
+  "register": {
+    "SignUp": "Crear cuenta",
+    "description": "¡Bienvenido! Comencemos creando tu cuenta.",
+    "haveAccount": "¿Ya tienes cuenta?",
+    "link": "Iniciar sesión"
+  },
+  "login": {
+    "SignIn": "Iniciar sesión",
+    "rememberMe": "Recuérdame",
+    "forgotPassword": "Olvidé mi contraseña",
+    "description": "¡Bienvenido de vuelta! Por favor, inicie sesión en su cuenta para continuar.",
+    "haveAccount": "¿No tienes cuenta todavía?",
+    "link": "Registrarse aquí"
+  },
+  "errors": {
+    "required": "Este campo es obligatorio.",
+    "invalidEmail": "Por favor ingresa un correo válido.",
+    "minLength": "La contraseña debe tener al menos 8 caracteres.",
+    "pattern": "Por favor ingresa sólo números."
+  },
+  "input": {
+    "name": {
+      "label": "Nombre",
+      "placeholder": "Ingrese su nombre"
+    },
+    "surname": {
+      "label": "Apellido",
+      "placeholder": "Ingrese su apellido"
+    },
+    "email": {
+      "label": "Correo electrónico",
+      "placeholder": "Ingrese su correo electrónico"
+    },
+    "username": {
+      "label": "Nombre de usuario",
+      "placeholder": "Ingrese su nombre de usuario"
+    },
+    "password": {
+      "label": "Contraseña",
+      "placeholder": "Ingrese su contraseña"
+    }
+  }
+}

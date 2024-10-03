@@ -1,0 +1,15 @@
+<mat-sidenav-container>
+    <mat-sidenav mode="side" opened [style.width]="sidenavWidth()" (mouseenter)="expandSidenav()"
+        (mouseleave)="collapseSidenav()">
+        <mat-nav-list class="">
+            <a mat-list-item class="menu-item " *ngFor="let item of menuItems()" [routerLink]="item.route"
+                routerLinkActive="select-menu-item" #rla="routerLinkActive" [activated]="rla.isActive">
+                <mat-icon routerLinkActive="text-sunset-orange" matListItemIcon>{{item.icon}}</mat-icon>
+                <span routerLinkActive="text-sunset-orange" matListItemTitle>{{item.label}}</span>
+            </a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content class="p-6 bg-light-gray" [style.margin-left]="sidenavWidth()">
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

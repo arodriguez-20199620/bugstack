@@ -1,0 +1,42 @@
+.audit-container {
+    padding: 16px;
+  
+    h2 {
+      margin-bottom: 16px;
+    }
+  
+    .filter-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+  
+      mat-form-field {
+        width: 180px;
+      }
+    }
+  
+    table {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 430px) {
+    .filter-container {
+      display: block;
+  
+      mat-form-field {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+    }
+  
+    table {
+      font-size: 12px;
+    }
+  
+    mat-header-cell, mat-cell {
+      padding: 4px;
+    }
+  }
+  

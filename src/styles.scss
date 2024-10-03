@@ -1,0 +1,45 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+$stack-overflow-primary: mat.define-palette(mat.$indigo-palette);
+$stack-overflow-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$stack-overflow-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object.
+$stack-overflow-theme: mat.define-light-theme((
+  color: (
+    primary: $stack-overflow-primary,
+    accent: $stack-overflow-accent,
+    warn: $stack-overflow-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+@include mat.all-component-themes($stack-overflow-theme);
+
+// Tailwind base, components, and utilities should come after Angular Material theming.
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "/node_modules/flag-icons/css/flag-icons.min.css";
+// Custom body styling
+body {
+  background-color: #dddd;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  margin: 0;
+  height: 100%;
+}
+
+html, body {
+  height: 100%;
+}

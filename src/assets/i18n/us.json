@@ -1,0 +1,67 @@
+{
+  "Home": "Home",
+  "About": "About",
+  "Blogs": "Blogs",
+  "Search": "Search...",
+  "Profiles": "Profiles",
+  "Users": "Users",
+  "Audit": "Audit",
+  "Save": "Save",
+  "Name": "Name*",
+  "Access": "Access",
+  "Administration": "General Administration",
+  "UserManagement": "User Management",
+  "ReviewandControl": "Review and Control",
+  "Administrator": "Administrator",
+  "Moderator": "Moderator",
+  "RegisteredUser": "Registered User",
+  "AnonymousUser": "Anonymous User",
+  "Reviser": "Reviser",
+  "Settings": "Settings",
+  "SignOut": "Sign out",
+  "Dashboard": "Dashboard",
+  "English": "English",
+  "Spanish": "Spanish",
+  "register": {
+    "SignUp": "Sign up",
+    "description": "Welcome! Let's get you started by creating an account.",
+    "haveAccount": "Already have an account?",
+    "link": "Sign in"
+  },
+  "login": {
+    "SignIn": "Sign in",
+    "rememberMe": "Remember me",
+    "forgotPassword": "Forgot your password?",
+    "description": "Welcome back! Please log in to your account to continue. ",
+    "haveAccount": "Don't have an account yet?",
+    "link": "Sign up here"
+  },
+  "errors": {
+    "required": "Thois field is required.",
+    "invalidEmail": "Please enter a valid email address.",
+    "minLength": "The password must be at least 8 characters long.",
+    "pattern": "Please enter numbers only."
+  },
+  "input": {
+    "name": {
+      "label": "Name",
+      "placeholder": "Enter name"
+    },
+    "surname": {
+      "label": "Surname",
+      "placeholder": "Enter surname"
+    },
+    "email": {
+      "label": "Email",
+      "placeholder": "Enter email"
+    },
+    "username": {
+      "label": "Username",
+      "placeholder": "Enter username"
+    },
+    "password": {
+      "label": "Password",
+      "placeholder": "Enter password"
+    }
+  }
+}

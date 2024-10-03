@@ -1,0 +1,139 @@
+<div class="flex h-full">
+    <div
+        class="bg-white w-[450px] h-full rounded-[5px] pt-6 px-6 shadow-[0_2px_10px_rgba(0,0,0,0.1)] flex flex-col justify-between me-5">
+        <div>
+            <h1 class="text-left text-xl font-bold">{{"Profiles" | translate}}</h1>
+            <form class="mt-4 max-w-md mx-auto">
+                <div class="relative">
+                    <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                        </svg>
+                    </div>
+                    <input type="search" id="default-search"
+                        class="block w-full p-4 ps-10 text-sm text-gray-700 border-b-2 border-gray-500 bg-white focus:bg-gray-100 focus:border-gray-700 focus:ring-0 focus:outline-none placeholder-gray-400"
+                        placeholder="{{ 'Search' | translate }}" required />
+
+                </div>
+            </form>
+        </div>
+
+        <div class="flex flex-col mt-4">
+            <div class="flex items-center mb-4">
+                <div class="h-2.5 w-2.5 rounded-full bg-green-500 me-2"></div>
+                <th scope="row" class="flex items-center text-gray-900 whitespace-nowrap dark:text-black">
+                    <img class="w-10 h-10 rounded-full" src="../../../assets/img/Profile2.jpg" alt="User image">
+                    <div class="ps-3 text-left text">
+                        <div class="text-base font-semibold">Hermes Batres</div>
+                        <div class="font-normal text-gray-500">hbatres-20222143@kinal.edu.gt</div>
+                    </div>
+                </th>
+            </div>
+
+            <div class="flex items-center mb-4">
+                <div class="h-2.5 w-2.5 rounded-full bg-green-500 me-2"></div>
+                <th scope="row" class="flex items-center text-gray-900 whitespace-nowrap dark:text-black">
+                    <img class="w-10 h-10 rounded-full" src="../../../assets/img/Profile2.jpg" alt="User image">
+                    <div class="ps-3 text-left text">
+                        <div class="text-base font-semibold">Hermes Batres</div>
+                        <div class="font-normal text-gray-500">hbatres-20222143@kinal.edu.gt</div>
+                    </div>
+                </th>
+            </div>
+
+            <div class="flex items-center mb-4">
+                <div class="h-2.5 w-2.5 rounded-full bg-red-600 me-2"></div>
+                <th scope="row" class="flex items-center text-gray-900 whitespace-nowrap dark:text-black">
+                    <img class="w-10 h-10 rounded-full" src="../../../assets/img/Profile2.jpg" alt="User image">
+                    <div class="ps-3 text-left text">
+                        <div class="text-base font-semibold">Hermes Batres</div>
+                        <div class="font-normal text-gray-500">hbatres-20222143@kinal.edu.gt</div>
+                    </div>
+                </th>
+            </div>
+
+            <div class="flex items-center mb-4">
+                <div class="h-2.5 w-2.5 rounded-full bg-green-500 me-2"></div>
+                <th scope="row" class="flex items-center text-gray-900 whitespace-nowrap dark:text-black">
+                    <img class="w-10 h-10 rounded-full" src="../../../assets/img/Profile2.jpg" alt="User image">
+                    <div class="ps-3 text-left text">
+                        <div class="text-base font-semibold">Hermes Batres</div>
+                        <div class="font-normal text-gray-500">hbatres-20222143@kinal.edu.gt</div>
+                    </div>
+                </th>
+            </div>
+
+            <div class="flex items-center mb-4">
+                <div class="h-2.5 w-2.5 rounded-full bg-red-600 me-2"></div>
+                <th scope="row" class="flex items-center text-gray-900 whitespace-nowrap dark:text-black">
+                    <img class="w-10 h-10 rounded-full" src="../../../assets/img/Profile2.jpg" alt="User image">
+                    <div class="ps-3 text-left text">
+                        <div class="text-base font-semibold">Hermes Batres</div>
+                        <div class="font-normal text-gray-500">hbatres-20222143@kinal.edu.gt</div>
+                    </div>
+                </th>
+            </div>
+        </div>
+        <div class="mt-auto">
+            <mat-paginator [length]="50" hidePageSize [pageSizeOptions]="[10]"
+                aria-label="Select page of periodic elements">
+            </mat-paginator>
+        </div>
+    </div>
+
+    <div class="flex flex-col w-full h-full">
+        <div class="bg-white w-full h-44 rounded-[5px] p-6  shadow-[0_2px_10px_rgba(0,0,0,0.1)] mb-5">
+            <div>
+                <h1 class="text-left text-xl font-bold">{{"Save" | translate}}</h1>
+                <form class="mt-4 max-w-xs">
+                    <div class="relative">
+                        <input type="name" id="default-name"
+                            class="block w-full p-4 text-sm text-gray-700 border-b-2 border-gray-500 bg-white focus:bg-gray-100 focus:border-gray-700 focus:ring-0 focus:outline-none placeholder-gray-400"
+                            placeholder="{{ 'Name' | translate }}" required />
+                        <button type="submit"
+                            class="text-white absolute end-2.5 bottom-2.5 bg-red-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-red-600 dark:hover:bg-red-600 dark:focus:ring-red-600">
+                            {{"Save" | translate}}
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+        <div class="flex flex-col w-full h-full">
+            <h1 class="text-left text-xl font-bold mb-5">{{"Access" | translate}}</h1>
+
+            <div class="flex space-x-5 w-full h-full">
+
+                <div class="bg-white w-full rounded-[5px] p-6 shadow-[0_2px_10px_rgba(0,0,0,0.1)]">
+                    <h2 class="text-lg font-semibold">{{ 'Administration' | translate }}</h2>
+                    <hr class="border-t border-gray-300 my-2">
+                    <div class="flex flex-col pt-5 space-y-5">
+                        <mat-slide-toggle>{{ 'Administrator' | translate }}</mat-slide-toggle>
+                        <mat-slide-toggle>{{ 'Moderator' | translate }}</mat-slide-toggle>
+                    </div>
+                </div>
+
+                <div class="bg-white w-full rounded-[5px] p-6 shadow-[0_2px_10px_rgba(0,0,0,0.1)]">
+                    <h2 class="text-lg font-semibold">{{ 'UserManagement' | translate }}</h2>
+                    <hr class="border-t border-gray-300 my-2">
+                    <div class="flex flex-col pt-5 space-y-5">
+                        <mat-slide-toggle>{{ 'RegisteredUser' | translate }}</mat-slide-toggle>
+                        <mat-slide-toggle>{{ 'AnonymousUser' | translate }}</mat-slide-toggle>
+                    </div>
+                </div>
+
+                <div class="bg-white w-full rounded-[5px] p-6 shadow-[0_2px_10px_rgba(0,0,0,0.1)]">
+                    <h2 class="text-lg font-semibold">{{ 'ReviewandControl' | translate }}</h2>
+                    <hr class="border-t border-gray-300 my-2">
+                    <div class="flex flex-col pt-5 space-y-5">
+                        <mat-slide-toggle>{{ 'Reviser' | translate }}</mat-slide-toggle>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

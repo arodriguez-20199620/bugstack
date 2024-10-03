@@ -1,0 +1,31 @@
+mat-toolbar {
+  position: relative;
+  z-index: 5;
+  background: #222831;
+
+  img {
+    height: 50%;
+    width: auto;
+    object-fit: contain;
+  }
+}
+
+mat-sidenav-content {
+  height: calc(100vh - 50px);
+}
+
+
+
+.select-menu-item {
+  @apply border-r-8 border-sunset-orange;
+  background: #dddddd;
+}
+
+mat-sidenav,
+mat-sidenav-content {
+  transition: all 500ms ease-in-out;
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  -ms-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
+}

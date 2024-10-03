@@ -1,0 +1,190 @@
+<div class="font-[sans-serif] bg-white lg:h-screen">
+  <div class="grid lg:grid-cols-2 items-center gap-8 h-full">
+    <div
+      class="max-lg:order-1 hidden lg:block p-4 relative h-full bg-dark-gunmetal"
+    >
+      <img
+        src="assets/svg/register.svg"
+        class="lg:max-w-[80vh] w-full h-full object-contain block mx-auto"
+        alt="login-image"
+      />
+    </div>
+
+    <div class="flex relative justify-center items-center p-6 h-screen w-full">
+      <img
+        src="assets/img/wave3.png"
+        class="absolute top-0 h-full -left-16 hidden lg:block object-contain"
+        alt="wave-image"
+      />
+      <form
+        [formGroup]="registerForm"
+        (ngSubmit)="onSubmit()"
+        class="max-w-md w-full mx-auto"
+      >
+        <div class="mb-10">
+          <h3
+            class="text-sunset-orange lg:text-3xl text-2xl font-extrabold max-md:text-center"
+          >
+            {{ 'register.SignUp' | translate }}
+          </h3>
+          <p class="text-sm font-medium mb-6 tracking-wide text-gray-500 max-md:text-center">
+            {{ 'register.description' | translate }}
+          </p>
+        </div>
+
+        <div class="mt-6 relative">
+          <div>
+            <label class="text-gray-800 font-bold text-sm block">
+              {{ 'input.name.label' | translate }}
+            </label>
+            <div class="relative flex items-center group">
+              <input
+                formControlName="name"
+                name="name"
+                type="text"
+                required
+                class="w-full bg-transparent text-sm border-b-2 border-gray-300 focus:border-dark-gunmetal px-2 py-3 outline-none"
+                placeholder="{{ 'input.name.placeholder' | translate }}"
+              />
+              <div
+                class="w-[18px] h-[18px] absolute right-2 text-gray-300 group-focus-within:text-dark-gunmetal"
+              >
+                <mat-icon aria-label="Email icon">person_add</mat-icon>
+              </div>
+            </div>
+          </div>
+          <p
+            *ngIf="
+              registerForm.get('name')?.errors &&
+              (registerForm.get('name')?.touched ||
+                registerForm.get('name')?.dirty)
+            "
+            class="absolute w-full text-center text-red-500 text-xs font-medium mt-1 h-5"
+          >
+            {{ getErrorMessage('name') }}
+          </p>
+        </div>
+        <div class="mt-6 relative">
+          <div>
+            <label class="text-gray-800 font-bold text-sm block">
+              {{ 'input.surname.label' | translate }}
+            </label>
+            <div class="relative flex items-center group">
+              <input
+                formControlName="surname"
+                name="surname"
+                type="text"
+                required
+                class="w-full bg-transparent text-sm border-b-2 border-gray-300 focus:border-dark-gunmetal px-2 py-3 outline-none"
+                placeholder="{{ 'input.surname.placeholder' | translate }}"
+              />
+              <div
+                class="w-[18px] h-[18px] absolute right-2 text-gray-300 group-focus-within:text-dark-gunmetal"
+              >
+                <mat-icon aria-label="Surname icon">person_add</mat-icon>
+              </div>
+            </div>
+          </div>
+          <p
+            *ngIf="
+              registerForm.get('surname')?.errors &&
+              (registerForm.get('surname')?.touched ||
+                registerForm.get('surname')?.dirty)
+            "
+            class="absolute w-full text-center text-red-500 text-xs font-medium mt-1 h-5"
+          >
+            {{ getErrorMessage('surname') }}
+          </p>
+        </div>
+        <div class="mt-6 relative">
+          <div>
+            <label class="text-gray-800 font-bold text-sm block">
+              {{ 'input.email.label' | translate }}
+            </label>
+            <div class="relative flex items-center group">
+              <input
+                formControlName="email"
+                name="email"
+                type="text"
+                required
+                class="w-full bg-transparent text-sm border-b-2 border-gray-300 focus:border-dark-gunmetal px-2 py-3 outline-none"
+                placeholder="{{ 'input.email.placeholder' | translate }}"
+              />
+              <div
+                class="w-[18px] h-[18px] absolute right-2 text-gray-300 group-focus-within:text-dark-gunmetal"
+              >
+                <mat-icon aria-label="Email icon">email</mat-icon>
+              </div>
+            </div>
+          </div>
+
+          <p
+            *ngIf="
+              registerForm.get('email')?.errors &&
+              (registerForm.get('email')?.touched ||
+                registerForm.get('email')?.dirty)
+            "
+            class="absolute w-full text-red-500 text-xs text-center font-medium mt-1 h-5"
+          >
+            {{ getErrorMessage('email') }}
+          </p>
+        </div>
+
+        <div class="mt-6 relative">
+          <div>
+            <label class="text-gray-800 font-bold text-sm block">
+              {{ 'input.username.label' | translate }}
+            </label>
+            <div class="relative flex items-center group">
+              <input
+                formControlName="username"
+                name="Username"
+                type="text"
+                required
+                class="w-full bg-transparent text-sm border-b-2 border-gray-300 focus:border-dark-gunmetal px-2 py-3 outline-none"
+                placeholder="{{ 'input.username.placeholder' | translate }}"
+              />
+              <div
+                class="w-[18px] h-[18px] absolute right-2 text-gray-300 group-focus-within:text-dark-gunmetal"
+              >
+                <mat-icon aria-label="Email icon">badge</mat-icon>
+              </div>
+            </div>
+            <p
+              class="absolute w-full text-center text-red-500 text-xs font-medium mt-1 h-5"
+              *ngIf="
+                registerForm.get('username')?.errors &&
+                (registerForm.get('username')?.touched ||
+                  registerForm.get('username')?.dirty)
+              "
+            >
+              {{ getErrorMessage('username') }}
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-12">
+          <button
+            type="submit"
+            [disabled]="registerForm.invalid"
+            [ngClass]="{
+              'opacity-60 cursor-not-allowed': registerForm.invalid,
+              ' active:scale-95  hover:brightness-90': registerForm.valid
+            }"
+            class="w-full py-3 px-6 text-sm tracking-wider font-semibold bg-sunset-orange rounded-md text-white focus:outline-none"
+          >
+            {{ 'register.SignUp' | translate }}
+          </button>
+          <p class="text-sm mt-4 text-gray-800 font-bold text-center">
+            {{ 'register.haveAccount' | translate }}
+            <a
+              routerLink="/auth/login"
+              class="text-sunset-orange font-semibold hover:underline ml-1"
+              >{{ 'register.link' | translate }}</a
+            >
+          </p>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

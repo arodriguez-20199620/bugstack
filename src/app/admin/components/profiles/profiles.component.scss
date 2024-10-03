@@ -1,0 +1,32 @@
+mat-paginator .mat-paginator-page-size {
+  display: none;
+}
+
+/* responsive.scss */
+
+@media (max-width: 1295px) {
+  .profiles {
+    width: 450px;
+  }
+  .text {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 1189px) {
+  .text {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 996px) {
+  .text {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 521px) {
+  .text {
+    font-size: 11px;
+  }
+}

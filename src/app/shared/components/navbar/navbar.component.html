@@ -1,0 +1,168 @@
+<header class="sticky top-0 z-50 bg-dark-gunmetal backdrop-blur-lg">
+  <nav
+    class="mx-auto flex max-w-6xl gap-8 px-6 transition-all duration-200 ease-in-out lg:px-12 py-2"
+  >
+    <div class="relative flex items-center">
+      <a href="/">
+        <img
+          src="../../../assets/img/Logo.svg"
+          loading="lazy"
+          style="color: transparent"
+          width="32"
+          height="32"
+      /></a>
+    </div>
+    <ul class="hidden items-center justify-center gap-6 md:flex">
+      <li>
+        <a
+          href="#"
+          class="text-white relative after:absolute after:-bottom-0.5 after:left-0 after:right-0 after:h-[3px] after:w-full after:origin-bottom after:scale-x-0 after:bg-sunset-orange after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom hover:after:scale-x-100"
+        >
+          {{ 'Home' | translate }}
+        </a>
+      </li>
+      <li>
+        <a
+          href="#"
+          class="text-white relative after:absolute after:-bottom-0.5 after:left-0 after:right-0 after:h-[3px] after:w-full after:origin-bottom after:scale-x-0 after:bg-sunset-orange after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom hover:after:scale-x-100"
+        >
+          {{ 'About' | translate }}
+        </a>
+      </li>
+      <li>
+        <a
+          href="#"
+          class="text-white relative after:absolute after:-bottom-0.5 after:left-0 after:right-0 after:h-[3px] after:w-full after:origin-bottom after:scale-x-0 after:bg-sunset-orange after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom hover:after:scale-x-100"
+        >
+          {{ 'Blogs' | translate }}
+        </a>
+      </li>
+    </ul>
+    <div class="flex-grow"></div>
+    <div class="hidden items-center justify-center space-x-2 md:flex">
+      <div class="relative">
+        <button
+          (click)="toggleLanguageDropdown()"
+          class="flex items-center text-sm font-medium text-white rounded-full hover:text-blue-600 dark:hover:text-blue-500 cursor-pointer"
+        >
+          <span class="fi fi-{{ activeLanguage }}"></span>
+          <svg
+            class="w-2.5 h-2.5 ms-3"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 10 6"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="m1 1 4 4 4-4"
+            />
+          </svg>
+        </button>
+        <div
+          *ngIf="isLanguageDropdownOpen"
+          class="absolute left-0 mt-2 z-10 bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600"
+        >
+          <ul class="py-2 font-medium" role="none">
+            <li>
+              <button
+                (click)="switchLanguage('us'); closeLanguageDropdown()"
+                class="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
+              >
+                <span class="fi fi-us"></span>
+              </button>
+            </li>
+            <li>
+              <button
+                (click)="switchLanguage('es'); closeLanguageDropdown()"
+                class="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
+              >
+                <span class="fi fi-es"></span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="relative">
+        <input
+          type="text"
+          class="block w-full pl-10 pr-3 py-1.5 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-sunset-orange focus:border-transparent"
+          placeholder="{{ 'Search' | translate }}"
+        />
+        <div
+          class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+        >
+          <svg
+            class="w-5 h-5 text-gray-500"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M21 21l-4.35-4.35M9.5 17a7.5 7.5 0 1 1 7.5-7.5 7.5 7.5 0 0 1-7.5 7.5z"
+            ></path>
+          </svg>
+        </div>
+      </div>
+      <div *ngIf="!isLoggedIn">
+        <a
+          href="/auth/login"
+          class="bg-transparent rounded hover:opacity-90 text-sunset-orange font-medium py-1.5 px-3 border border-sunset-orange cursor-pointer"
+        >
+          {{ 'login.SignIn' | translate }}
+        </a>
+      </div>
+      <div *ngIf="!isLoggedIn">
+        <a
+          href="/auth/register"
+          class="group relative inline-flex py-1.5 items-center justify-center overflow-hidden rounded bg-sunset-orange px-3 font-medium text-white"
+        >
+        {{ 'register.SignUp' | translate }}
+        <div
+            class="absolute inset-0 flex h-full w-full justify-center [transform:skew(-12deg)_translateX(-100%)] group-hover:duration-1000 group-hover:[transform:skew(-12deg)_translateX(100%)]"
+          >
+            <div class="relative h-full w-8 bg-white/20"></div>
+          </div>
+        </a>
+      </div>
+      <div *ngIf="isLoggedIn" class="flex items-center justify-center">
+        <button class="focus:outline-none" [matMenuTriggerFor]="menu">
+          <img
+            src="https://randomuser.me/api/portraits/women/50.jpg"
+            class="object-cover w-8 h-8 bg-cover rounded-full transition transform hover:scale-105 active:scale-95"
+          />
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>Item 1</button>
+          <button mat-menu-item>Item 2</button>
+        </mat-menu>
+      </div>
+    </div>
+    <div class="relative flex items-center justify-center md:hidden">
+      <button type="button">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          aria-hidden="true"
+          class="h-6 w-auto text-slate-900"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+          ></path>
+        </svg>
+      </button>
+    </div>
+  </nav>
+</header>
